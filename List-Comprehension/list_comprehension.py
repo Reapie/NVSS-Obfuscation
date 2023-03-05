@@ -1,0 +1,1 @@
+print("\n".join(["".join([("{:2d} ".format(10*_+__)) if (lambda ___: all([___ % ____ != 0 for ____ in range(2, ___)]))(10*_+__) else "XX " for __ in range(1,11)]) for _ in range(0, 10)]))
