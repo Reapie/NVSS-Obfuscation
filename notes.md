@@ -38,20 +38,18 @@ Really no need to obfuscate more if antivirus doesnt detect
 
 Overdoing it just gives away techniques that might have been beneficial in the future
 
-Consumers dont like overprotective measures
+Consumers dont like overprotective measures (Denuvo)
 
 ## Overdoing it, A LOT
 
 CTFs use very weird, not-relevant tactics
 
 Contest is only about obfuscating the source, rules are updated to keep it interesting
-(https://www.ioccc.org/)
+(<https://www.ioccc.org/>)
 
 Code golf results in very weird & hard to read code
 
 ## C Donut
-
-We all know it
 
 Would be very hard to read if we didnt know what it is
 
@@ -70,7 +68,7 @@ Vastly different techniques depending on platform and language
 Interpreted Languages usually don't contain actual exploit, rather just a downloader,
 so obfuscation is usually not too strong
 
-JS Frameworks output horrible code
+JS Frameworks output unreadable code
 
 Powershell or VBS is usually only lightly modified because it is not the actual payload
 
@@ -114,22 +112,20 @@ remember "Reversing with Lena"
 
 Strings are encoded/encrypted just like in interpreted languages
 
-Enterprise Dotfuscator can do it
+Enterprise Dotfuscator has several options
 
-(Dotfuscator will show up a lot, because companies used to love C# Apps)
+(Dotfuscator will be mentioned a lot, because companies used to love C# Apps)
 
 # Control Flow Obfuscation
 
-Adding more branches
-
-Makes Graph view far more complicated
-
-## Obfuscated Function Graph
+Adding more branches:
 
 - Never used code
 - Code that does nothing relevant
 - One time loops
 - more cases than nescessary
+
+Makes graph view far more complicated
 
 ## High-End Tools
 
@@ -140,15 +136,11 @@ or just run it and trace the execution
 
 ## Control Flow Flattening
 
-Very widely used
+Instead of linar program flow, there is basically a giant switch
 
-Also fairly high effort to reverse
+Taken branch is controlled by global state variable
 
-But not that hard to do automatically
-
-*show how it works*
-
-State could be set as a side-effect somewhere
+Program flow graph goes from mostly vertical to horizontal (flattened)
 
 ## Opaque Predicates
 
@@ -213,11 +205,9 @@ Entropy analysis could be used
 
 1) Find where it is unpacked (some sort of loop that references data)
 
-2) After the loop is a jump somewhere (OEP)
+2) After the loop is a jump somewhere (Original Entry Point)
 
 3) Break there during execution or manually unpack
-
-Fairly High Effort
 
 # Novelty Techniques
 
@@ -239,11 +229,9 @@ Insane amount of work to do on a useful scale
 
 ## Flow Graph Art
 
+Psychological Warfare, makes Reverse Engineer want to give up
+
 Using control flow obfuscation on such a scale that IDA shows an image in the graph
-
-Images NEED to be small and greyscale
-
-Works better with high contrast
 
 REpsych doesnt actually obfuscate, the code is not in the picture
 
@@ -263,8 +251,8 @@ Anything can become unreadable if overdone enough
 
 # Demo
 
-Files here:
-https://github.com/Reapie/NVSS-Obfuscation
+All files here:
+<https://github.com/Reapie/NVSS-Obfuscation>
 
 # Powershell Obfuscation
 
@@ -280,7 +268,7 @@ $EncodedText =[Convert]::ToBase64String($Bytes)
 $EncodedText
 ```
 
-The "Invoke-Stealth" (https://github.com/JoelGMSec/Invoke-Stealth) tool is just one of many, and the created file "obfuscated.ps1" was created with the following command:
+The "Invoke-Stealth" (<https://github.com/JoelGMSec/Invoke-Stealth>) tool is just one of many, and the created file "obfuscated.ps1" was created with the following command:
 
 ```bash
 pwsh Invoke-Stealth/Invoke-Stealth.ps1 obfuscated.ps1 -technique ReverseB64
@@ -320,13 +308,13 @@ To use it just run `upx -d <file>`, but make sure you don't run it on the origin
 
 # MoVfuscator
 
-https://github.com/xoreaxeaxeax/movfuscator
+<https://github.com/xoreaxeaxeax/movfuscator>
 
-https://www.youtube.com/watch?v=R7EEoWg6Ekk
+<https://www.youtube.com/watch?v=R7EEoWg6Ekk>
 
 xoreaxeax does awesome stuff and has many interesting talks, his MoVfuscator project makes use of a "basic" building block to turn C code into only MOV instructions.
 
-https://www.xorpd.net/pages/xchg_rax/snip_2c.html
+<https://www.xorpd.net/pages/xchg_rax/snip_2c.html>
 
 
 ```x86asm
